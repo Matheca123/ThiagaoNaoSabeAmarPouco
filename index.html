@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>I LOVE YOU ❤️</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <img src="fundo.png" class="fundo" />
+
+    <div class="container">
+      <img src="titulo.png" class="titulo" />
+
+      <img src="fotos.png" class="fotos" />
+
+      <!-- PLAYER -->
+      <div class="player">
+        <img src="playerimagem.png" class="capa" />
+        <button id="playBtn">▶</button>
+        <input type="range" id="progress" value="0" />
+      </div>
+
+      <audio id="musica" src="musica.mp3"></audio>
+    </div>
+
+    <script>
+      const musica = document.getElementById("musica");
+      const playBtn = document.getElementById("playBtn");
+      const progress = document.getElementById("progress");
+
+      playBtn.addEventListener("click", () => {
+        if (musica.paused) {
+          musica.play();
+          playBtn.innerText = "⏸";
+        } else {
+          musica.pause();
+          playBtn.innerText = "▶";
+        }
+      });
+
+      musica.addEventListener("timeupdate", () => {
+        progress.max = musica.duration;
+        progress.value = musica.currentTime;
+      });
+
+      progress.addEventListener("input", () => {
+        musica.currentTime = progress.value;
+      });
+    </script>
+  </body>
+</html>
