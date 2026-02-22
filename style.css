@@ -10,7 +10,6 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* FUNDO */
 .fundo {
   position: fixed;
   width: 100%;
@@ -19,7 +18,6 @@ body {
   z-index: 1;
 }
 
-/* CONTAINER */
 .container {
   position: relative;
   width: 100%;
@@ -27,7 +25,6 @@ body {
   z-index: 2;
 }
 
-/* TÍTULO */
 .titulo {
   position: absolute;
   top: 5%;
@@ -37,7 +34,6 @@ body {
   max-width: 95vw;
 }
 
-/* FOTOS (MAIORES) */
 .fotos {
   position: absolute;
   top: 60%;
@@ -47,23 +43,27 @@ body {
   max-width: 95vw;
 }
 
-/* PLAYER */
 .player {
   position: absolute;
-  top: 45%;
+  top: 38%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: rgba(128, 0, 128, 0.75);
-  padding: 12px 25px;
-  border-radius: 50px;
+  padding: 10px 40px;
+  border-radius: 60px;
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: 20px;
   backdrop-filter: blur(10px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  width: 600px;
+  max-width: 85vw;
 }
 
-/* FOTO REDONDA */
+#progress {
+  flex: 1;
+}
+
 .capa {
   width: 55px;
   height: 55px;
@@ -71,7 +71,6 @@ body {
   object-fit: cover;
 }
 
-/* BOTÃO */
 #playBtn {
   background: none;
   border: none;
